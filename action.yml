@@ -1,0 +1,22 @@
+name: 'Welcome Message'
+description: 'Prints a welcome message to the user'
+author: 'kumar'
+
+# This is where we define the input (the name you want to print)
+inputs:
+  person_name:  # This is the variable name
+    description: 'The name of the person to greet'
+    required: true
+    default: 'World'
+
+# This defines how the action runs
+runs:
+  using: "composite" # "composite" allows us to run shell steps
+  steps:
+    - name: Print Welcome
+      shell: bash
+      # We access the input using ${{ inputs.variable_name }}
+      run: |
+        echo "------------------------------------"
+        echo "Welcome ${{ inputs.person_name }}!"
+        echo "------------------------------------"
