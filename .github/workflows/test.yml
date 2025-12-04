@@ -13,4 +13,4 @@ jobs:
       - name: Greet Bharath
         uses: KUMAR-REDDY-BAVANASI/hello-action@v1 # Points to the v1 tag we created
         with:
-          person_name: 'Bharath' # This passes the input
+          person_name: 'Gangi' # This passes the input
